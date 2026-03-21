@@ -50,3 +50,14 @@ The demo program allocates two PIDs, releases one of them, and allocates again t
 gcc -o pid_manager pid_manager.c
 ./pid_manager
 ```
+
+## Collatz with POSIX Shared Memory - Optional Exercise 3.22 Submission
+
+### Program Description
+This version keeps the original `collatz.c` unchanged and adds a separate program that uses POSIX shared memory. The child process computes the Collatz sequence and writes it into shared memory with `shm_open()`, `ftruncate()`, and `mmap()`. The parent process waits for the child with `wait()` and then reads the result from shared memory.
+
+### Compilation & Execution
+```bash
+gcc -Wall -Wextra -pedantic -std=c11 -o collatz_shm collatz_shm.c
+./collatz_shm <positive_integer>
+```
