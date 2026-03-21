@@ -33,3 +33,20 @@ A program that implements the Collatz conjecture (also known as the 3n+1 problem
 gcc -o collatz collatz.c
 ./collatz <positive_integer>
 ```
+
+## PID Manager with Bitmap - Optional Exercise 3.20 Submission
+
+### Program Description
+A PID manager that uses a bitmap to track process identifiers from `300` to `5000`. It implements:
+
+- `allocate_map()` to initialize the bitmap
+- `allocate_pid()` to return the next available PID
+- `release_pid()` to free a previously allocated PID
+
+The demo program allocates two PIDs, releases one of them, and allocates again to show PID reuse.
+
+### Compilation & Execution
+```bash
+gcc -o pid_manager pid_manager.c
+./pid_manager
+```
