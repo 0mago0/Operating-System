@@ -22,3 +22,14 @@ strace ./FileCopy source.txt dest.txt
 - Buffer-based copying (4KB chunks)
 - Comprehensive error handling with perror()
 - Proper file descriptor cleanup
+
+## Collatz Conjecture - Exercise 3.21 Submission
+
+### Program Description
+A program that implements the Collatz conjecture (also known as the 3n+1 problem). It takes a positive integer as a command-line argument and computes the sequence by repeatedly applying the rules: if the number is even, divide by 2; if odd, multiply by 3 and add 1, until reaching 1. The program outputs the sequence and the number of steps.
+
+### Compilation & Execution
+```bash
+gcc -o collatz collatz.c
+./collatz <positive_integer>
+```
